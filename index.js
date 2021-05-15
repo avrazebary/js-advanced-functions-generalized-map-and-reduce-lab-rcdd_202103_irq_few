@@ -1,8 +1,12 @@
 // Add your functions here
-function mapToNegativize(src) {
+  
+function map(src, cb) {
   let r = []
-  for (let i = 0; i < src.length; i++ ) {
-    r.push(-1 * src[i]) // Unique work
+
+  for (let i = 0; i < src.length; i++) {
+    let theElement = src[i]
+    r.push(cb(theElement))
   }
-  return r
-} 
+
+  return r;
+}
